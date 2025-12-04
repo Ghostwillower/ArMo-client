@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'fabric-loom' version '1.13.6'
     id 'maven-publish'
 }
 
@@ -13,33 +14,49 @@ base {
 repositories {
     mavenCentral()
     maven {
+        name = "Fabric"
+        url = "https://maven.fabricmc.net/"
+    }
+    maven {
         name = "Jitpack"
         url = "https://jitpack.io"
     }
 }
 
 dependencies {
-    // No external dependencies in Phase 1
-    // Using custom SimpleLogger instead of SLF4J
+    // Minecraft and Fabric
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     
     // Baritone API for pathfinding and automation
-    // Note: Baritone integration will be added in Phase 2
-    // when Fabric/Minecraft integration is complete.
-    // For now, modules are structured to use Baritone but
-    // the actual implementation is deferred.
+    // Note: Baritone integration will be added when available for 1.21.10
     // compileOnly 'com.github.cabaletta:baritone:1.10.2'
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 17
+    it.options.release = 21
 }
 
 java {
     withSourcesJar()
     withJavadocJar()
 
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "minecraft_version", project.minecraft_version
+    inputs.property "loader_version", project.loader_version
+    
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version,
+               "minecraft_version": project.minecraft_version,
+               "loader_version": project.loader_version
+    }
 }
 
 jar {
@@ -64,15 +81,10 @@ task projectInfo {
         println "=================================="
         println "Name: ${project.mod_name}"
         println "Version: ${project.mod_version}"
+        println "Minecraft: ${project.minecraft_version}"
         println "Group: ${project.maven_group}"
         println "Java: ${java.sourceCompatibility}"
         println "=================================="
     }
-}
-
-// Run the client demo
-task runClient(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'com.thales.ThalesClient'
 }
 

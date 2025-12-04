@@ -15,12 +15,15 @@ import com.thales.module.modules.render.ItemESP;
 import com.thales.module.modules.render.ChestESP;
 import com.thales.module.modules.render.HoleESP;
 import com.thales.module.modules.render.Tracers;
+import com.thales.module.modules.render.Zoom;
+import com.thales.module.modules.render.EntityESP;
 
 // Player modules
 import com.thales.module.modules.player.AutoEat;
 import com.thales.module.modules.player.AutoTool;
 import com.thales.module.modules.player.InvManager;
 import com.thales.module.modules.player.ChestStealer;
+import com.thales.module.modules.player.AutoArmor;
 
 // World modules
 import com.thales.module.modules.world.SafeBreak;
@@ -30,9 +33,11 @@ import com.thales.module.modules.world.NoWeather;
 // Combat modules
 import com.thales.module.modules.combat.AutoTotem;
 import com.thales.module.modules.combat.AutoShield;
+import com.thales.module.modules.combat.AimAssist;
 
 // Misc modules
 import com.thales.module.modules.misc.ExampleModule;
+import com.thales.module.modules.misc.AutoRespawn;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,12 +76,15 @@ public class ModuleManager {
         addModule(new ChestESP());
         addModule(new HoleESP());
         addModule(new Tracers());
+        addModule(new Zoom());
+        addModule(new EntityESP());
         
         // Player - Inventory and resource management
         addModule(new AutoEat());
         addModule(new AutoTool());
         addModule(new InvManager());
         addModule(new ChestStealer());
+        addModule(new AutoArmor());
         
         // World - Mining and building assists
         addModule(new SafeBreak());
@@ -86,9 +94,11 @@ public class ModuleManager {
         // Combat - Defensive assists only (no offensive)
         addModule(new AutoTotem());
         addModule(new AutoShield());
+        addModule(new AimAssist());
         
         // Misc
         addModule(new ExampleModule());
+        addModule(new AutoRespawn());
     }
     
     /**

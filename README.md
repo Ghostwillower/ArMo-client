@@ -1,7 +1,7 @@
 # Thales Client - Under the Radar Assist Client
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Minecraft](https://img.shields.io/badge/minecraft-1.20.x-green.svg)
+![Minecraft](https://img.shields.io/badge/minecraft-1.21.10-green.svg)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow.svg)
 
 **Thales** is an "under the radar" Minecraft assist client built on Fabric, designed to provide subtle quality-of-life enhancements, intelligent automation via Baritone, and helpful visual aids. Unlike aggressive hacking clients, Thales focuses on assistance rather than unfair advantages.
@@ -44,6 +44,15 @@ Unlike traditional "hacked clients," Thales focuses on:
 
 ## ✨ Features
 
+**New in v0.2.0:**
+- ✨ **AimAssist** - Subtle aim assistance with toggleable and adjustable strength
+- ✨ **AutoArmor** - Automatically equips best armor from inventory
+- ✨ **Zoom** - Spyglass-like zoom with configurable levels
+- ✨ **EntityESP** - Enhanced entity highlighting with filters
+- ✨ **AutoRespawn** - Automatic respawning with configurable delay
+- 🚀 **Updated to Minecraft 1.21.10** - Full Fabric support
+- 🔧 **GitHub Actions** - Automated Fabric jar builds
+
 ### 🏃 Movement (Quality of Life)
 - **Sprint** - Auto-sprint functionality
 - **AutoWalk** - Baritone-powered intelligent pathfinding
@@ -59,12 +68,15 @@ Unlike traditional "hacked clients," Thales focuses on:
 - **ChestESP** - Locate storage containers
 - **HoleESP** - Find safe 1x1 holes
 - **Tracers** - Configurable entity tracking lines
+- **Zoom** - Spyglass-like zoom feature (NEW!)
+- **EntityESP** - Entity highlighting with filters (NEW!)
 
 ### 👤 Player (Resource Management)
 - **AutoEat** - Automatic hunger management
 - **AutoTool** - Smart tool selection for mining
 - **InvManager** - Intelligent inventory sorting
 - **ChestStealer** - Rapid chest looting
+- **AutoArmor** - Automatic best armor equipping (NEW!)
 
 ### 🌍 World (Building & Mining Assists)
 - **SafeBreak** - Prevents dangerous block breaking
@@ -74,6 +86,7 @@ Unlike traditional "hacked clients," Thales focuses on:
 ### 🛡️ Combat (Defensive Only)
 - **AutoTotem** - Automatic totem management
 - **AutoShield** - Defensive shield raising
+- **AimAssist** - Subtle aim assistance with adjustable strength (NEW!)
 
 ### ⚠️ What We DON'T Include
 - ❌ Kill Aura - No automated attacking
@@ -111,7 +124,7 @@ Thales is built with a modular architecture:
 ### Prerequisites
 
 - Java 17 or higher
-- Minecraft Java Edition 1.20.x
+- Minecraft Java Edition 1.21.10
 - Fabric Loader installed
 
 ### Installation
@@ -147,10 +160,11 @@ cd ArMo-client
 
 - **Language**: Java 17
 - **Build Tool**: Gradle 8.x
-- **Framework**: Fabric Loader + Fabric API (Phase 2)
-- **Automation**: Baritone integration (Phase 2)
+- **Framework**: Fabric Loader + Fabric API
+- **Automation**: Baritone integration (planned)
 - **Mixin**: For runtime code modification
-- **Minecraft Version**: 1.20.x
+- **Minecraft Version**: 1.21.10
+- **CI/CD**: GitHub Actions
 
 ### Project Structure
 
