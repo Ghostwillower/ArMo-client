@@ -1,4 +1,4 @@
-package com.armo.command;
+package com.thales.command;
 
 /**
  * Base class for all commands

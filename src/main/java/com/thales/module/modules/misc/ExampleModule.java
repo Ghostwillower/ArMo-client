@@ -1,7 +1,7 @@
-package com.armo.module.modules.misc;
+package com.thales.module.modules.misc;
 
-import com.armo.module.Category;
-import com.armo.module.Module;
+import com.thales.module.Category;
+import com.thales.module.Module;
 
 /**
  * Example module for testing and demonstration

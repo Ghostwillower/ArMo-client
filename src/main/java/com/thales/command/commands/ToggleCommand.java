@@ -1,8 +1,8 @@
-package com.armo.command.commands;
+package com.thales.command.commands;
 
-import com.armo.ArMoClient;
-import com.armo.command.Command;
-import com.armo.module.Module;
+import com.thales.ThalesClient;
+import com.thales.command.Command;
+import com.thales.module.Module;
 
 /**
  * Toggle command - Toggle modules on/off
@@ -21,7 +21,7 @@ public class ToggleCommand extends Command {
         }
         
         String moduleName = args[0];
-        Module module = ArMoClient.getInstance().getModuleManager().getModule(moduleName);
+        Module module = ThalesClient.getInstance().getModuleManager().getModule(moduleName);
         
         if (module == null) {
             System.out.println("Module '" + moduleName + "' not found!");

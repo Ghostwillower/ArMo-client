@@ -1,8 +1,8 @@
-package com.armo.command;
+package com.thales.command;
 
-import com.armo.ArMoClient;
-import com.armo.command.commands.HelpCommand;
-import com.armo.command.commands.ToggleCommand;
+import com.thales.ThalesClient;
+import com.thales.command.commands.HelpCommand;
+import com.thales.command.commands.ToggleCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,13 +58,13 @@ public class CommandManager {
                     command.execute(args);
                     return true;
                 } catch (Exception e) {
-                    ArMoClient.LOGGER.error("Error executing command {}: {}", 
+                    ThalesClient.LOGGER.error("Error executing command {}: {}", 
                         commandName, e.getMessage(), e);
                 }
             }
         }
         
-        ArMoClient.LOGGER.warn("Unknown command. Type {}help for a list of commands.", PREFIX);
+        ThalesClient.LOGGER.warn("Unknown command. Type {}help for a list of commands.", PREFIX);
         return true;
     }
     

@@ -1,4 +1,4 @@
-package com.armo.setting;
+package com.thales.setting;
 
 import java.util.function.Supplier;
 

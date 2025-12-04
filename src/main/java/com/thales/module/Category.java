@@ -1,4 +1,4 @@
-package com.armo.module;
+package com.thales.module;
 
 /**
  * Module categories for organization

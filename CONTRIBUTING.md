@@ -1,6 +1,6 @@
-# Contributing to ArMo Client
+# Contributing to Thales Client
 
-Thank you for your interest in contributing to ArMo Client! This guide will help you get started.
+Thank you for your interest in contributing to Thales Client! This guide will help you get started.
 
 ## Table of Contents
 
@@ -35,13 +35,13 @@ By participating in this project, you agree to:
 1. Fork the repository on GitHub
 2. Clone your fork:
 ```bash
-git clone https://github.com/YOUR_USERNAME/ArMo-client.git
-cd ArMo-client
+git clone https://github.com/YOUR_USERNAME/Thales-client.git
+cd Thales-client
 ```
 
 3. Add upstream remote:
 ```bash
-git remote add upstream https://github.com/Ghostwillower/ArMo-client.git
+git remote add upstream https://github.com/Ghostwillower/Thales-client.git
 ```
 
 ## Development Setup
@@ -63,26 +63,26 @@ git remote add upstream https://github.com/Ghostwillower/ArMo-client.git
 
 #### IntelliJ IDEA
 1. Open IntelliJ IDEA
-2. File → Open → Select the ArMo-client directory
+2. File → Open → Select the Thales-client directory
 3. Wait for Gradle to sync
 4. Run configurations will be created automatically
 
 #### Eclipse
 1. Import → Gradle → Existing Gradle Project
-2. Select the ArMo-client directory
+2. Select the Thales-client directory
 3. Finish
 
 #### VS Code
-1. Open the ArMo-client directory
+1. Open the Thales-client directory
 2. Install Java Extension Pack
 3. Gradle for Java extension should detect the project
 
 ## Project Structure
 
 ```
-ArMo-client/
-├── src/main/java/com/armo/
-│   ├── ArMoClient.java          # Main entry point
+Thales-client/
+├── src/main/java/com/thales/
+│   ├── ThalesClient.java          # Main entry point
 │   ├── module/                   # Module system
 │   │   ├── Module.java          # Base module class
 │   │   ├── ModuleManager.java   # Module management
@@ -131,10 +131,10 @@ ArMo-client/
 
 Example:
 ```java
-package com.armo.module.modules.movement;
+package com.thales.module.modules.movement;
 
-import com.armo.module.Category;
-import com.armo.module.Module;
+import com.thales.module.Category;
+import com.thales.module.Module;
 
 public class YourModule extends Module {
     public YourModule() {
@@ -165,16 +165,16 @@ addModule(new YourModule());
 
 ### Creating a New Command
 
-1. Create a class in `com.armo.command.commands`
+1. Create a class in `com.thales.command.commands`
 2. Extend the `Command` class
 3. Implement `execute()` and `getUsage()`
 4. Register in `CommandManager`
 
 Example:
 ```java
-package com.armo.command.commands;
+package com.thales.command.commands;
 
-import com.armo.command.Command;
+import com.thales.command.Command;
 
 public class YourCommand extends Command {
     public YourCommand() {
@@ -200,15 +200,15 @@ addCommand(new YourCommand());
 
 ### Creating a New Event
 
-1. Create a class in `com.armo.event.events`
+1. Create a class in `com.thales.event.events`
 2. Extend the `Event` class
 3. Add any event-specific fields
 
 Example:
 ```java
-package com.armo.event.events;
+package com.thales.event.events;
 
-import com.armo.event.Event;
+import com.thales.event.Event;
 
 public class YourEvent extends Event {
     private final Object data;
@@ -240,7 +240,7 @@ public class YourEvent extends Event {
 - Methods: camelCase (`onEnable`, `getModule`)
 - Variables: camelCase (`moduleManager`, `isEnabled`)
 - Constants: UPPER_SNAKE_CASE (`MOD_NAME`, `VERSION`)
-- Packages: lowercase (`com.armo.module`)
+- Packages: lowercase (`com.thales.module`)
 
 ### Documentation
 
@@ -398,4 +398,4 @@ Contributors will be recognized in:
 
 ---
 
-Thank you for contributing to ArMo Client! 🎉
+Thank you for contributing to Thales Client! 🎉

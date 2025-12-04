@@ -1,7 +1,7 @@
-package com.armo.module.modules.movement;
+package com.thales.module.modules.movement;
 
-import com.armo.module.Category;
-import com.armo.module.Module;
+import com.thales.module.Category;
+import com.thales.module.Module;
 
 /**
  * Sprint module - Automatically sprints when moving

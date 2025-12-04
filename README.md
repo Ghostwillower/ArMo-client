@@ -1,10 +1,10 @@
-# ArMo Client
+# Thales Client
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Minecraft](https://img.shields.io/badge/minecraft-1.20.x-green.svg)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow.svg)
 
-**ArMo** (Advanced Resource Modification) is a Minecraft utility client built on Fabric, designed to provide advanced gameplay enhancements, resource management, and quality of life improvements.
+**Thales** is a Minecraft utility client built on Fabric, designed to provide advanced gameplay enhancements, resource management, and quality of life improvements. Named after Thales of Miletus, the first Greek philosopher, this client embodies foundational wisdom and innovative thinking.
 
 ## ⚠️ Disclaimer
 
@@ -20,9 +20,9 @@ This client is intended for:
 
 **Users are responsible for complying with server rules and terms of service.**
 
-## 🎯 What is ArMo?
+## 🎯 What is Thales?
 
-**ArMo** stands for **Advanced Resource Modification**. It's a comprehensive Minecraft client that provides:
+**Thales** is a comprehensive Minecraft client named after Thales of Miletus (c. 624 – c. 545 BC), recognized as the first philosopher in Greek tradition and the father of science. Just as Thales sought to understand the fundamental principles of nature, Thales Client provides:
 
 - 🛠️ **Resource Management**: Advanced inventory and resource handling
 - ⚡ **Performance Enhancements**: Optimized gameplay experience
@@ -70,11 +70,11 @@ This client is intended for:
 
 ## 🏗️ Architecture
 
-ArMo is built with a modular architecture:
+Thales is built with a modular architecture:
 
 ```
 ┌─────────────────────────────────────┐
-│         ArMo Client Core            │
+│        Thales Client Core           │
 ├─────────────────────────────────────┤
 │  Module System  │  Event System     │
 │  Command System │  Config System    │
@@ -138,9 +138,9 @@ cd ArMo-client
 ### Project Structure
 
 ```
-ArMo-client/
+thales-client/
 ├── src/main/java/          # Java source code
-│   └── com/armo/           # Main package
+│   └── com/thales/         # Main package
 │       ├── module/         # Module system
 │       ├── event/          # Event system
 │       ├── command/        # Command system
@@ -148,7 +148,7 @@ ArMo-client/
 │       └── util/           # Utilities
 ├── src/main/resources/     # Resources
 │   ├── fabric.mod.json     # Mod metadata
-│   └── armo.mixins.json    # Mixin configuration
+│   └── thales.mixins.json  # Mixin configuration
 └── build.gradle            # Build configuration
 ```
 
@@ -156,7 +156,7 @@ ArMo-client/
 
 #### Phase 1: Foundation ✅ (Current)
 - [x] Research and planning
-- [x] Define ArMo branding and purpose
+- [x] Define Thales branding and purpose
 - [ ] Project structure setup
 - [ ] Basic Fabric mod skeleton
 - [ ] Event system framework
@@ -206,10 +206,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## ⚖️ Legal Notice
 
-ArMo is an independent project and is not affiliated with, endorsed by, or connected to Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.
+Thales is an independent project and is not affiliated with, endorsed by, or connected to Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.
 
 This software is provided "as is" without warranty of any kind. Use at your own risk and responsibility.
 
 ---
 
-**Made with ❤️ by the ArMo development team**
+**Made with ❤️ by the Thales development team**

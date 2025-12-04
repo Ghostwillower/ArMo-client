@@ -1,4 +1,4 @@
-package com.armo.event;
+package com.thales.event;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

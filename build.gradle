@@ -42,7 +42,7 @@ jar {
         attributes(
             'Implementation-Title': project.mod_name,
             'Implementation-Version': project.mod_version,
-            'Main-Class': 'com.armo.ArMoClient'
+            'Main-Class': 'com.thales.ThalesClient'
         )
     }
 }
@@ -53,7 +53,7 @@ shadowJar {
         attributes(
             'Implementation-Title': project.mod_name,
             'Implementation-Version': project.mod_version,
-            'Main-Class': 'com.armo.ArMoClient'
+            'Main-Class': 'com.thales.ThalesClient'
         )
     }
 }
@@ -62,7 +62,7 @@ shadowJar {
 task projectInfo {
     doLast {
         println "=================================="
-        println "ArMo Client - Project Information"
+        println "Thales Client - Project Information"
         println "=================================="
         println "Name: ${project.mod_name}"
         println "Version: ${project.mod_version}"
@@ -75,6 +75,6 @@ task projectInfo {
 // Run the client demo
 task runClient(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'com.armo.ArMoClient'
+    mainClass = 'com.thales.ThalesClient'
 }
 
