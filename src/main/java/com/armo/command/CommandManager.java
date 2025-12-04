@@ -1,5 +1,6 @@
 package com.armo.command;
 
+import com.armo.ArMoClient;
 import com.armo.command.commands.HelpCommand;
 import com.armo.command.commands.ToggleCommand;
 
@@ -57,13 +58,13 @@ public class CommandManager {
                     command.execute(args);
                     return true;
                 } catch (Exception e) {
-                    System.err.println("Error executing command: " + e.getMessage());
-                    e.printStackTrace();
+                    ArMoClient.LOGGER.error("Error executing command {}: {}", 
+                        commandName, e.getMessage(), e);
                 }
             }
         }
         
-        System.out.println("Unknown command. Type " + PREFIX + "help for a list of commands.");
+        ArMoClient.LOGGER.warn("Unknown command. Type {}help for a list of commands.", PREFIX);
         return true;
     }
     

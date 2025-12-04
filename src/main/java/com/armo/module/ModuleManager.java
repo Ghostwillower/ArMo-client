@@ -56,12 +56,13 @@ public class ModuleManager {
     /**
      * Get a module by class
      */
-    @SuppressWarnings("unchecked")
     public <T extends Module> T getModule(Class<T> clazz) {
-        return (T) modules.stream()
-            .filter(m -> m.getClass() == clazz)
-            .findFirst()
-            .orElse(null);
+        for (Module module : modules) {
+            if (clazz.isInstance(module)) {
+                return clazz.cast(module);
+            }
+        }
+        return null;
     }
     
     /**

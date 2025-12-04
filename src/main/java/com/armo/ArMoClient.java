@@ -100,10 +100,11 @@ public class ArMoClient {
      * Main method for demonstration purposes
      */
     public static void main(String[] args) {
-        LOGGER.info("=".repeat(50));
+        String separator = "==================================================";
+        LOGGER.info(separator);
         LOGGER.info("ArMo Client - Advanced Resource Modification");
         LOGGER.info("Phase 1: Framework Groundwork");
-        LOGGER.info("=".repeat(50));
+        LOGGER.info(separator);
         
         // Initialize the client
         ArMoClient client = ArMoClient.getInstance();
@@ -126,9 +127,9 @@ public class ArMoClient {
             LOGGER.info("  - {}: {}", command.getName(), command.getDescription())
         );
         
-        LOGGER.info("\n" + "=".repeat(50));
+        LOGGER.info("\n{}", separator);
         LOGGER.info("Framework initialization complete!");
         LOGGER.info("Ready for Phase 2: Minecraft integration");
-        LOGGER.info("=".repeat(50));
+        LOGGER.info(separator);
     }
 }

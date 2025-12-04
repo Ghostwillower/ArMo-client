@@ -1,5 +1,7 @@
 package com.armo.event;
 
+import com.armo.ArMoClient;
+
 import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -71,7 +73,10 @@ public class EventManager {
             try {
                 method.invoke(object, event);
             } catch (Exception e) {
-                e.printStackTrace();
+                ArMoClient.LOGGER.error("Error invoking event handler {} for event {}", 
+                    method.getName(), 
+                    event.getClass().getSimpleName(), 
+                    e);
             }
         }
         
