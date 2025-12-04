@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "thales",
+  "version": "${version}",
+  "name": "Thales Client",
+  "description": "Under the radar assist client with quality of life features and Baritone integration",
+  "authors": [
+    "Thales Development Team"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Ghostwillower/ArMo-client",
+    "sources": "https://github.com/Ghostwillower/ArMo-client"
+  },
+  "license": "MIT",
+  "icon": "assets/thales/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.thales.integration.ThalesFabricMod"
+    ]
+  },
+  "mixins": [
+    "thales.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-api": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "baritone": "*"
+  }
+}
