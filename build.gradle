@@ -1,0 +1,80 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // SLF4J for logging
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 17
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archives_base_name}"}
+    }
+    
+    manifest {
+        attributes(
+            'Implementation-Title': project.mod_name,
+            'Implementation-Version': project.mod_version,
+            'Main-Class': 'com.armo.ArMoClient'
+        )
+    }
+}
+
+shadowJar {
+    archiveClassifier.set('all')
+    manifest {
+        attributes(
+            'Implementation-Title': project.mod_name,
+            'Implementation-Version': project.mod_version,
+            'Main-Class': 'com.armo.ArMoClient'
+        )
+    }
+}
+
+// Task to display project info
+task projectInfo {
+    doLast {
+        println "=================================="
+        println "ArMo Client - Project Information"
+        println "=================================="
+        println "Name: ${project.mod_name}"
+        println "Version: ${project.mod_version}"
+        println "Group: ${project.maven_group}"
+        println "Java: ${java.sourceCompatibility}"
+        println "=================================="
+    }
+}
+
+// Run the client demo
+task runClient(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.armo.ArMoClient'
+}
+
