@@ -19,9 +19,8 @@ repositories {
 }
 
 dependencies {
-    // SLF4J for logging
-    implementation 'org.slf4j:slf4j-api:2.0.9'
-    implementation 'org.slf4j:slf4j-simple:2.0.9'
+    // No external dependencies in Phase 1
+    // Using custom SimpleLogger instead of SLF4J
     
     // Baritone API for pathfinding and automation
     // Note: Baritone integration will be added in Phase 2
