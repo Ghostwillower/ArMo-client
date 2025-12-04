@@ -14,7 +14,7 @@ public class HelpCommand extends Command {
     
     @Override
     public void execute(String[] args) {
-        System.out.println("=== ArMo Client Commands ===");
+        System.out.println("=== Thales Client Commands ===");
         
         for (Command command : ThalesClient.getInstance().getCommandManager().getCommands()) {
             System.out.println(command.getName() + " - " + command.getDescription());
