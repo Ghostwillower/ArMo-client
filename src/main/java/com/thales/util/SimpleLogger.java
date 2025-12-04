@@ -20,7 +20,7 @@ public class SimpleLogger {
     }
     
     public void info(String format, Object... args) {
-        log("INFO", String.format(format.replace("{}", "%s"), args));
+        log("INFO", formatMessage(format, args));
     }
     
     public void warn(String message) {
@@ -28,7 +28,7 @@ public class SimpleLogger {
     }
     
     public void warn(String format, Object... args) {
-        log("WARN", String.format(format.replace("{}", "%s"), args));
+        log("WARN", formatMessage(format, args));
     }
     
     public void error(String message) {
@@ -36,7 +36,7 @@ public class SimpleLogger {
     }
     
     public void error(String format, Object... args) {
-        log("ERROR", String.format(format.replace("{}", "%s"), args));
+        log("ERROR", formatMessage(format, args));
     }
     
     public void debug(String message) {
@@ -44,7 +44,11 @@ public class SimpleLogger {
     }
     
     public void debug(String format, Object... args) {
-        log("DEBUG", String.format(format.replace("{}", "%s"), args));
+        log("DEBUG", formatMessage(format, args));
+    }
+    
+    private String formatMessage(String format, Object... args) {
+        return String.format(format.replace("{}", "%s"), args);
     }
     
     private void log(String level, String message) {

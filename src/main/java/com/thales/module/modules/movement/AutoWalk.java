@@ -3,7 +3,6 @@ package com.thales.module.modules.movement;
 import com.thales.module.Category;
 import com.thales.module.Module;
 import com.thales.util.MinecraftUtil;
-import com.thales.util.BaritoneUtil;
 
 /**
  * AutoWalk - Automatic walking with Baritone integration

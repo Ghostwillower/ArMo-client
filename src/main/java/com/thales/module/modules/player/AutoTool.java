@@ -13,7 +13,8 @@ import com.thales.util.MinecraftUtil;
  */
 public class AutoTool extends Module {
     
-    private int previousSlot = -1;
+    private static final int NO_PREVIOUS_SLOT = -1;
+    private int previousSlot = NO_PREVIOUS_SLOT;
     
     public AutoTool() {
         super("AutoTool", "Auto-select best tool for mining", Category.PLAYER);
@@ -22,7 +23,7 @@ public class AutoTool extends Module {
     @Override
     public void onEnable() {
         super.onEnable();
-        previousSlot = -1;
+        previousSlot = NO_PREVIOUS_SLOT;
     }
     
     @Override
@@ -30,9 +31,9 @@ public class AutoTool extends Module {
         super.onDisable();
         // Restore previous slot if we switched
         // Phase 2:
-        // if (previousSlot != -1) {
+        // if (previousSlot != NO_PREVIOUS_SLOT) {
         //     MinecraftUtil.getPlayer().getInventory().selectedSlot = previousSlot;
-        //     previousSlot = -1;
+        //     previousSlot = NO_PREVIOUS_SLOT;
         // }
     }
     
@@ -69,7 +70,7 @@ public class AutoTool extends Module {
     // Phase 2: Helper to find best tool
     // private int findBestTool(ClientPlayerEntity player, BlockState state) {
     //     float bestSpeed = 1.0f;
-    //     int bestSlot = -1;
+    //     int bestSlot = NO_PREVIOUS_SLOT;
     //     
     //     // Check all hotbar slots
     //     for (int i = 0; i < 9; i++) {
