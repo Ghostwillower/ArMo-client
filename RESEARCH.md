@@ -27,7 +27,7 @@ Primary identity: **Thales - Foundational Wisdom**
 3. **Fabric Client**: Lightweight modding framework
 4. **Hacked/Utility Clients**: Clients with gameplay enhancements
 
-### ArMo Client Type
+### Thales Client Type
 
 Thales is a **utility client** built on top of Fabric, providing:
 - Performance enhancements
