@@ -4,7 +4,8 @@ import com.thales.module.Category;
 import com.thales.module.Module;
 
 /**
- * Sprint module - Automatically sprints when moving
+ * Sprint - Automatically sprints when moving
+ * Quality of life movement assist
  */
 public class Sprint extends Module {
     
@@ -24,7 +25,11 @@ public class Sprint extends Module {
     
     @Override
     public void onUpdate() {
-        // Sprint logic will be implemented when we add mixin hooks
-        // For now, this is a placeholder
+        // Implementation would:
+        // 1. Check if player is moving forward
+        // 2. Check if player has enough hunger to sprint
+        // 3. Automatically set sprint state
+        
+        // Quality of life - removes need to hold sprint key
     }
 }
