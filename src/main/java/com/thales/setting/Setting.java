@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 /**
  * Base class for module settings
  */
-public abstract class Setting<T> {
+public class Setting<T> {
     
     private final String name;
     private final String description;
