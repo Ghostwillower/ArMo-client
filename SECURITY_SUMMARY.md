@@ -1,4 +1,4 @@
-# Security Summary - ArMo Client Phase 1
+# Security Summary - Thales Client Phase 1
 
 ## Security Scan Results
 

@@ -1,27 +1,27 @@
-package com.armo;
+package com.thales;
 
-import com.armo.event.EventManager;
-import com.armo.module.ModuleManager;
-import com.armo.command.CommandManager;
+import com.thales.event.EventManager;
+import com.thales.module.ModuleManager;
+import com.thales.command.CommandManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * ArMo Client - Advanced Resource Modification
+ * Thales Client - Foundational Wisdom
  * Main client initialization class
  * 
  * Note: This is Phase 1 - Framework groundwork.
  * Minecraft integration will be added in Phase 2.
  */
-public class ArMoClient {
+public class ThalesClient {
     
-    public static final String MOD_ID = "armo";
-    public static final String MOD_NAME = "ArMo Client";
+    public static final String MOD_ID = "thales";
+    public static final String MOD_NAME = "Thales Client";
     public static final String VERSION = "0.1.0-ALPHA";
     
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     
-    private static ArMoClient INSTANCE;
+    private static ThalesClient INSTANCE;
     
     private ModuleManager moduleManager;
     private EventManager eventManager;
@@ -34,7 +34,7 @@ public class ArMoClient {
         INSTANCE = this;
         
         LOGGER.info("Initializing {} v{}", MOD_NAME, VERSION);
-        LOGGER.info("Advanced Resource Modification - Loading...");
+        LOGGER.info("Foundational Wisdom - Loading...");
         
         // Initialize core systems
         initializeSystems();
@@ -65,11 +65,11 @@ public class ArMoClient {
     }
     
     /**
-     * Get the singleton instance of ArMoClient
+     * Get the singleton instance of ThalesClient
      */
-    public static ArMoClient getInstance() {
+    public static ThalesClient getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new ArMoClient();
+            INSTANCE = new ThalesClient();
             INSTANCE.initialize();
         }
         return INSTANCE;
@@ -102,12 +102,12 @@ public class ArMoClient {
     public static void main(String[] args) {
         String separator = "==================================================";
         LOGGER.info(separator);
-        LOGGER.info("ArMo Client - Advanced Resource Modification");
+        LOGGER.info("Thales Client - Foundational Wisdom");
         LOGGER.info("Phase 1: Framework Groundwork");
         LOGGER.info(separator);
         
         // Initialize the client
-        ArMoClient client = ArMoClient.getInstance();
+        ThalesClient client = ThalesClient.getInstance();
         
         // Demonstrate module system
         LOGGER.info("\n--- Module System Demo ---");

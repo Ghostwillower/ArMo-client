@@ -1,6 +1,6 @@
-package com.armo.event.events;
+package com.thales.event.events;
 
-import com.armo.event.Event;
+import com.thales.event.Event;
 
 /**
  * Event fired every client tick

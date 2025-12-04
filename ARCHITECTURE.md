@@ -1,8 +1,8 @@
-# ArMo Client Architecture
+# Thales Client Architecture
 
 ## Overview
 
-ArMo Client is built on a modular architecture using the Fabric modding framework for Minecraft. This document outlines the architectural decisions and structure of the client.
+Thales Client is built on a modular architecture using the Fabric modding framework for Minecraft. This document outlines the architectural decisions and structure of the client.
 
 ## Core Principles
 
@@ -16,7 +16,7 @@ ArMo Client is built on a modular architecture using the Fabric modding framewor
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     ArMo Client                             │
+│                     Thales Client                             │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  ┌────────────────┐  ┌────────────────┐  ┌──────────────┐  │
@@ -50,7 +50,7 @@ ArMo Client is built on a modular architecture using the Fabric modding framewor
 
 #### Module
 - **Purpose**: Represents a single feature/hack
-- **Location**: `com.armo.module.Module`
+- **Location**: `com.thales.module.Module`
 - **Key Methods**:
   - `onEnable()`: Called when module is turned on
   - `onDisable()`: Called when module is turned off
@@ -59,7 +59,7 @@ ArMo Client is built on a modular architecture using the Fabric modding framewor
 
 #### ModuleManager
 - **Purpose**: Manages all modules in the client
-- **Location**: `com.armo.module.ModuleManager`
+- **Location**: `com.thales.module.ModuleManager`
 - **Responsibilities**:
   - Register all modules
   - Enable/disable modules
@@ -68,7 +68,7 @@ ArMo Client is built on a modular architecture using the Fabric modding framewor
 
 #### Category
 - **Purpose**: Organize modules into logical groups
-- **Location**: `com.armo.module.Category`
+- **Location**: `com.thales.module.Category`
 - **Categories**:
   - Combat: PvP-related features
   - Movement: Movement enhancements
@@ -81,14 +81,14 @@ ArMo Client is built on a modular architecture using the Fabric modding framewor
 
 #### Event
 - **Purpose**: Base class for all events
-- **Location**: `com.armo.event.Event`
+- **Location**: `com.thales.event.Event`
 - **Features**:
   - Cancellable events
   - Type-safe event handling
 
 #### EventManager
 - **Purpose**: Event bus for publish-subscribe pattern
-- **Location**: `com.armo.event.EventManager`
+- **Location**: `com.thales.event.EventManager`
 - **Features**:
   - Register/unregister listeners
   - Post events to all listeners
@@ -96,7 +96,7 @@ ArMo Client is built on a modular architecture using the Fabric modding framewor
 
 #### EventHandler
 - **Purpose**: Annotation to mark event listener methods
-- **Location**: `com.armo.event.EventHandler`
+- **Location**: `com.thales.event.EventHandler`
 - **Usage**:
 ```java
 @EventHandler
@@ -109,7 +109,7 @@ public void onTick(TickEvent event) {
 
 #### Command
 - **Purpose**: Base class for all commands
-- **Location**: `com.armo.command.Command`
+- **Location**: `com.thales.command.Command`
 - **Features**:
   - Name and aliases
   - Execute method
@@ -117,7 +117,7 @@ public void onTick(TickEvent event) {
 
 #### CommandManager
 - **Purpose**: Manages command execution
-- **Location**: `com.armo.command.CommandManager`
+- **Location**: `com.thales.command.CommandManager`
 - **Features**:
   - Command prefix (default: `.`)
   - Parse and execute commands
@@ -127,7 +127,7 @@ public void onTick(TickEvent event) {
 
 #### Setting
 - **Purpose**: Configuration option for modules
-- **Location**: `com.armo.setting.Setting`
+- **Location**: `com.thales.setting.Setting`
 - **Features**:
   - Generic type support
   - Conditional visibility
@@ -137,7 +137,7 @@ public void onTick(TickEvent event) {
 
 #### MixinMinecraftClient
 - **Purpose**: Hook into Minecraft's tick method
-- **Location**: `com.armo.mixin.MixinMinecraftClient`
+- **Location**: `com.thales.mixin.MixinMinecraftClient`
 - **Functionality**:
   - Injects into `MinecraftClient.tick()`
   - Updates all enabled modules
@@ -146,7 +146,7 @@ public void onTick(TickEvent event) {
 
 #### ClientUtil
 - **Purpose**: Helper methods for accessing Minecraft objects
-- **Location**: `com.armo.util.ClientUtil`
+- **Location**: `com.thales.util.ClientUtil`
 - **Methods**:
   - `getClient()`: Get MinecraftClient instance
   - `getPlayer()`: Get player entity
@@ -239,8 +239,8 @@ gradle build → Compile Java sources
 ```
 
 ### Output
-- Main JAR: `armo-client-{version}.jar`
-- Sources JAR: `armo-client-{version}-sources.jar`
+- Main JAR: `thales-client-{version}.jar`
+- Sources JAR: `thales-client-{version}-sources.jar`
 
 ## Dependencies
 
@@ -258,10 +258,10 @@ gradle build → Compile Java sources
 ## File Structure
 
 ```
-ArMo-client/
+Thales-client/
 ├── src/main/
-│   ├── java/com/armo/
-│   │   ├── ArMoClient.java          # Main entry point
+│   ├── java/com/thales/
+│   │   ├── ThalesClient.java          # Main entry point
 │   │   ├── module/                   # Module system
 │   │   │   ├── Module.java
 │   │   │   ├── ModuleManager.java
@@ -290,8 +290,8 @@ ArMo-client/
 │   │       └── MixinMinecraftClient.java
 │   └── resources/
 │       ├── fabric.mod.json           # Mod metadata
-│       ├── armo.mixins.json          # Mixin config
-│       └── assets/armo/
+│       ├── thales.mixins.json          # Mixin config
+│       └── assets/thales/
 │           └── lang/en_us.json       # Localization
 ├── build.gradle                      # Build config
 ├── gradle.properties                 # Properties

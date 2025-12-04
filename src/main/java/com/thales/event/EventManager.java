@@ -1,6 +1,6 @@
-package com.armo.event;
+package com.thales.event;
 
-import com.armo.ArMoClient;
+import com.thales.ThalesClient;
 
 import java.lang.reflect.Method;
 import java.util.*;
@@ -73,7 +73,7 @@ public class EventManager {
             try {
                 method.invoke(object, event);
             } catch (Exception e) {
-                ArMoClient.LOGGER.error("Error invoking event handler {} for event {}", 
+                ThalesClient.LOGGER.error("Error invoking event handler {} for event {}", 
                     method.getName(), 
                     event.getClass().getSimpleName(), 
                     e);

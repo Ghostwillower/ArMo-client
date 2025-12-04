@@ -1,15 +1,15 @@
-# ArMo Client - Phase 1 Status Report
+# Thales Client - Phase 1 Status Report
 
 ## Project Overview
 
-**ArMo** (Advanced Resource Modification) is a Minecraft utility client project currently in Phase 1 development.
+**Thales** (Advanced Resource Modification) is a Minecraft utility client project currently in Phase 1 development.
 
 **Status**: ✅ Phase 1 Complete - Framework Groundwork Established
 
-## What ArMo Stands For
+## What Thales Stands For
 
 ### Primary Definition
-**ArMo** = **Advanced Resource Modification**
+**Thales** = **Advanced Resource Modification**
 
 This name emphasizes the client's focus on:
 - Advanced gameplay features
@@ -46,9 +46,9 @@ This name emphasizes the client's focus on:
 ### ✅ Project Structure Established
 
 ```
-ArMo-client/
-├── src/main/java/com/armo/
-│   ├── ArMoClient.java          ✅ Main entry point
+Thales-client/
+├── src/main/java/com/thales/
+│   ├── ThalesClient.java          ✅ Main entry point
 │   ├── module/                   ✅ Module system
 │   │   ├── Module.java          ✅ Base class
 │   │   ├── ModuleManager.java   ✅ Manager
@@ -129,9 +129,9 @@ ArMo-client/
   - `sourcesJar` - Package sources
 
 - **Build Output**:
-  - Main JAR: `armo-client-0.1.0-ALPHA.jar`
-  - Sources JAR: `armo-client-0.1.0-ALPHA-sources.jar`
-  - Javadoc JAR: `armo-client-0.1.0-ALPHA-javadoc.jar`
+  - Main JAR: `thales-client-0.1.0-ALPHA.jar`
+  - Sources JAR: `thales-client-0.1.0-ALPHA-sources.jar`
+  - Javadoc JAR: `thales-client-0.1.0-ALPHA-javadoc.jar`
 
 ### ✅ Documentation
 
@@ -148,17 +148,17 @@ When running `./gradlew runClient`, the client successfully:
 
 ```
 ==================================================
-ArMo Client - Advanced Resource Modification
+Thales Client - Advanced Resource Modification
 Phase 1: Framework Groundwork
 ==================================================
-Initializing ArMo Client v0.1.0-ALPHA
+Initializing Thales Client v0.1.0-ALPHA
 Advanced Resource Modification - Loading...
 Initializing core systems...
 Event system initialized
 Module system initialized with 3 modules
 Command system initialized
 All core systems initialized successfully
-ArMo Client successfully loaded!
+Thales Client successfully loaded!
 
 --- Module System Demo ---
 Total modules: 3
@@ -213,7 +213,7 @@ Ready for Phase 2: Minecraft integration
 ## Technical Highlights
 
 ### Design Patterns Used
-- **Singleton**: ArMoClient instance
+- **Singleton**: ThalesClient instance
 - **Manager Pattern**: ModuleManager, EventManager, CommandManager
 - **Observer Pattern**: Event system
 - **Command Pattern**: Command system
@@ -272,7 +272,7 @@ These are all expected and will be addressed in future phases.
 **Phase 1 is complete and successful!** 
 
 We have:
-- ✅ Defined what ArMo stands for
+- ✅ Defined what Thales stands for
 - ✅ Conducted comprehensive research
 - ✅ Established solid architectural foundation
 - ✅ Implemented all core systems
@@ -291,5 +291,5 @@ The groundwork is fully laid for Phase 2 development where we will integrate wit
 
 ---
 
-**ArMo Client - Advanced Resource Modification**
+**Thales Client - Advanced Resource Modification**
 *Building the future of Minecraft utility clients*

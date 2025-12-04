@@ -1,4 +1,4 @@
-package com.armo.event;
+package com.thales.event;
 
 /**
  * Base class for all events

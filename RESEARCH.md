@@ -1,15 +1,22 @@
-# ArMo Client - Research & Design Document
+# Thales Client - Research & Design Document
 
-## What is ArMo?
+## What is Thales?
 
-**ArMo** stands for **Advanced Resource Modification** - a Minecraft client focused on providing advanced gameplay enhancements and resource management capabilities.
+**Thales** is named after **Thales of Miletus** (c. 624 – c. 545 BC), the first Greek philosopher and mathematician. Known as the "Father of Science," Thales sought to explain natural phenomena through reason rather than mythology.
 
-Alternative interpretations:
-- **Ar**mored **Mo**difications - emphasizing protection and enhancement
-- **Ar**tificial **Mo**vement - focusing on automation features
-- **Ar**senal **Mo**difications - featuring comprehensive toolset
+This Minecraft client embodies Thales' spirit of:
+- **Foundational Wisdom** - Building on fundamental principles
+- **Rational Thinking** - Strategic gameplay enhancement
+- **Innovation** - Pushing boundaries of what's possible
+- **Natural Philosophy** - Understanding and mastering game mechanics
 
-Primary meaning: **Advanced Resource Modification**
+Alternative philosophical inspirations considered:
+- **Euclid** - Father of Geometry, systematic and precise  
+- **Aristotle** - Logic and reasoning
+- **Socrates** - Questioning and wisdom
+- **Pythagoras** - Mathematics and philosophy
+
+Primary identity: **Thales - Foundational Wisdom**
 
 ## Minecraft Client Architecture Research
 
@@ -22,7 +29,7 @@ Primary meaning: **Advanced Resource Modification**
 
 ### ArMo Client Type
 
-ArMo is a **utility client** built on top of Fabric, providing:
+Thales is a **utility client** built on top of Fabric, providing:
 - Performance enhancements
 - Quality of life improvements
 - Advanced automation features
@@ -190,13 +197,13 @@ ArMo is a **utility client** built on top of Fabric, providing:
 ## File Structure Plan
 
 ```
-ArMo-client/
+thales-client/
 ├── src/
 │   └── main/
 │       ├── java/
 │       │   └── com/
-│       │       └── armo/
-│       │           ├── ArMoClient.java          # Main client class
+│       │       └── thales/
+│       │           ├── ThalesClient.java        # Main client class
 │       │           ├── module/
 │       │           │   ├── Module.java          # Base module class
 │       │           │   ├── ModuleManager.java   # Module management
@@ -226,9 +233,9 @@ ArMo-client/
 │       │               └── [utility classes]
 │       └── resources/
 │           ├── fabric.mod.json                  # Mod metadata
-│           ├── armo.mixins.json                 # Mixin config
+│           ├── thales.mixins.json               # Mixin config
 │           └── assets/
-│               └── armo/
+│               └── thales/
 │                   ├── icon.png                 # Mod icon
 │                   └── lang/
 │                       └── en_us.json           # Localization

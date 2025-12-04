@@ -1,6 +1,6 @@
-package com.armo.module;
+package com.thales.module;
 
-import com.armo.setting.Setting;
+import com.thales.setting.Setting;
 import java.util.ArrayList;
 import java.util.List;
 

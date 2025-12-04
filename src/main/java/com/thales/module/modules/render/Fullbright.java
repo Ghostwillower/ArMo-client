@@ -1,7 +1,7 @@
-package com.armo.module.modules.render;
+package com.thales.module.modules.render;
 
-import com.armo.module.Category;
-import com.armo.module.Module;
+import com.thales.module.Category;
+import com.thales.module.Module;
 
 /**
  * Fullbright module - Maximum brightness

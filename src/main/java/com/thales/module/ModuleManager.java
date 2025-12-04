@@ -1,8 +1,8 @@
-package com.armo.module;
+package com.thales.module;
 
-import com.armo.module.modules.movement.Sprint;
-import com.armo.module.modules.render.Fullbright;
-import com.armo.module.modules.misc.ExampleModule;
+import com.thales.module.modules.movement.Sprint;
+import com.thales.module.modules.render.Fullbright;
+import com.thales.module.modules.misc.ExampleModule;
 
 import java.util.ArrayList;
 import java.util.List;
