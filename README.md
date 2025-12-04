@@ -1,10 +1,12 @@
-# Thales Client
+# Thales Client - Under the Radar Assist Client
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Minecraft](https://img.shields.io/badge/minecraft-1.20.x-green.svg)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow.svg)
 
-**Thales** is a Minecraft utility client built on Fabric, designed to provide advanced gameplay enhancements, resource management, and quality of life improvements. Named after Thales of Miletus, the first Greek philosopher, this client embodies foundational wisdom and innovative thinking.
+**Thales** is an "under the radar" Minecraft assist client built on Fabric, designed to provide subtle quality-of-life enhancements, intelligent automation via Baritone, and helpful visual aids. Unlike aggressive hacking clients, Thales focuses on assistance rather than unfair advantages.
+
+Named after Thales of Miletus, the first Greek philosopher, this client embodies wisdom and subtle intelligence in gameplay enhancement.
 
 ## ⚠️ Disclaimer
 
@@ -22,51 +24,64 @@ This client is intended for:
 
 ## 🎯 What is Thales?
 
-**Thales** is a comprehensive Minecraft client named after Thales of Miletus (c. 624 – c. 545 BC), recognized as the first philosopher in Greek tradition and the father of science. Just as Thales sought to understand the fundamental principles of nature, Thales Client provides:
+**Thales** is an **"under the radar" assist client** that provides helpful gameplay enhancements without being obvious or aggressive. Key philosophy:
 
-- 🛠️ **Resource Management**: Advanced inventory and resource handling
-- ⚡ **Performance Enhancements**: Optimized gameplay experience
-- 🎮 **Quality of Life**: Automation and convenience features
-- 🎨 **Visual Enhancements**: ESP, tracers, and rendering improvements
-- ⌨️ **Command System**: Powerful in-game commands
+- 🤝 **Quality of Life**: Automate tedium, not gameplay
+- 🎯 **Subtle Assistance**: Visual aids that help, not cheat
+- 🛡️ **Safety First**: Defensive features prioritized over offensive
+- 🧭 **Baritone Integration**: Intelligent pathfinding and automation
+- 🎮 **Skill Enhancement**: Assists skilled play, doesn't replace it
 
-## ✨ Features (Planned)
+Unlike traditional "hacked clients," Thales focuses on:
+- ✅ Resource management and organization
+- ✅ Movement quality of life improvements  
+- ✅ Subtle visual information overlays
+- ✅ Automation of repetitive tasks
+- ✅ Safety and fall prevention
+- ❌ **NOT** aggressive PvP features
+- ❌ **NOT** obvious cheating (kill aura, fly, etc.)
+- ❌ **NOT** designed for griefing
 
-### Module Categories
+## ✨ Features
 
-#### 🗡️ Combat
-- Killaura - Automatic entity targeting
-- Velocity - Knockback modification
-- Criticals - Force critical hits
-- AutoTotem - Automatic totem management
+### 🏃 Movement (Quality of Life)
+- **Sprint** - Auto-sprint functionality
+- **AutoWalk** - Baritone-powered intelligent pathfinding
+- **AutoSneak** - Context-aware edge detection
+- **Step** - Improved step height for easier traversal
+- **NoSlow** - Remove slowdown from using items
+- **AntiVoid** - Void fall protection
+- **Scaffold** - Safe bridging and building assistance
 
-#### 🏃 Movement
-- Sprint - Auto-sprint functionality
-- Fly - Flight capabilities
-- Speed - Enhanced movement speed
-- NoFall - Fall damage prevention
+### 👁️ Render (Subtle Visual Aids)
+- **Fullbright** - Maximum visibility in dark areas
+- **ItemESP** - Highlight dropped items
+- **ChestESP** - Locate storage containers
+- **HoleESP** - Find safe 1x1 holes
+- **Tracers** - Configurable entity tracking lines
 
-#### 👁️ Render
-- Fullbright - Maximum visibility
-- ESP - Entity highlighting
-- Tracers - Entity tracking lines
-- Nametags - Enhanced name displays
+### 👤 Player (Resource Management)
+- **AutoEat** - Automatic hunger management
+- **AutoTool** - Smart tool selection for mining
+- **InvManager** - Intelligent inventory sorting
+- **ChestStealer** - Rapid chest looting
 
-#### 👤 Player
-- FastBreak - Faster block breaking
-- FastPlace - Faster block placement
-- AutoEat - Automatic hunger management
-- InvManager - Smart inventory sorting
+### 🌍 World (Building & Mining Assists)
+- **SafeBreak** - Prevents dangerous block breaking
+- **AutoMine** - Baritone-powered ore mining
+- **NoWeather** - Client-side weather removal
 
-#### 🌍 World
-- Xray - See through blocks
-- ChestESP - Highlight containers
-- NoWeather - Weather control
+### 🛡️ Combat (Defensive Only)
+- **AutoTotem** - Automatic totem management
+- **AutoShield** - Defensive shield raising
 
-#### 🔧 Misc
-- MiddleClick - Customizable middle-click actions
-- AutoReconnect - Auto-reconnect on disconnect
-- FakePlayer - Testing utilities
+### ⚠️ What We DON'T Include
+- ❌ Kill Aura - No automated attacking
+- ❌ Velocity - No knockback modification  
+- ❌ Criticals - No forced critical hits
+- ❌ Flight - No creative flying
+- ❌ X-Ray - Too obvious and unfair
+- ❌ Aggressive PvP features
 
 ## 🏗️ Architecture
 
@@ -121,9 +136,10 @@ cd ArMo-client
 
 ## 📖 Documentation
 
+- [Assist Client Design](ASSIST_CLIENT_DESIGN.md) - Philosophy and design principles
 - [Research Document](RESEARCH.md) - Technical research and design decisions
-- [Contributing Guide](CONTRIBUTING.md) - How to contribute (coming soon)
-- [Module Documentation](docs/MODULES.md) - Detailed module information (coming soon)
+- [Architecture Guide](ARCHITECTURE.md) - Technical architecture details
+- [Contributing Guide](CONTRIBUTING.md) - How to contribute
 
 ## 🛠️ Development
 
@@ -131,7 +147,8 @@ cd ArMo-client
 
 - **Language**: Java 17
 - **Build Tool**: Gradle 8.x
-- **Framework**: Fabric Loader + Fabric API
+- **Framework**: Fabric Loader + Fabric API (Phase 2)
+- **Automation**: Baritone integration (Phase 2)
 - **Mixin**: For runtime code modification
 - **Minecraft Version**: 1.20.x
 
@@ -154,29 +171,33 @@ thales-client/
 
 ### Development Roadmap
 
-#### Phase 1: Foundation ✅ (Current)
+#### Phase 1: Foundation ✅ Complete
 - [x] Research and planning
-- [x] Define Thales branding and purpose
-- [ ] Project structure setup
-- [ ] Basic Fabric mod skeleton
-- [ ] Event system framework
+- [x] Define "under the radar" assist client philosophy  
+- [x] Project structure setup
+- [x] Event system framework
+- [x] Module system framework
+- [x] 22 assist-focused modules created
+- [x] Baritone integration planning
 
-#### Phase 2: Core Systems
-- [ ] Module system implementation
-- [ ] Command system
-- [ ] Configuration management
-- [ ] Basic GUI framework
+#### Phase 2: Minecraft Integration (In Progress)
+- [ ] Add Fabric Loader integration
+- [ ] Implement Baritone API integration
+- [ ] Add mixin hooks for module functionality
+- [ ] Connect modules to game state
+- [ ] Implement actual module logic
 
-#### Phase 3: Essential Modules
-- [ ] Movement modules
-- [ ] Render modules
-- [ ] Player utility modules
+#### Phase 3: Polish & GUI
+- [ ] ClickGUI for module management
+- [ ] HUD elements for information display
+- [ ] Configuration saving/loading
+- [ ] Keybind system
 
 #### Phase 4: Advanced Features
-- [ ] Advanced GUI (ClickGUI)
-- [ ] HUD system
-- [ ] Additional modules
-- [ ] Optimization
+- [ ] Per-server configurations
+- [ ] Module presets
+- [ ] Advanced Baritone features
+- [ ] Optimization and refinement
 
 ## 🤝 Contributing
 
@@ -196,8 +217,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Fabric Team for the excellent modding framework
+- Baritone developers for intelligent pathfinding
 - Minecraft modding community for documentation and resources
-- Open-source client projects for inspiration (Meteor, Wurst)
+- Open-source client projects for inspiration
 
 ## 📞 Contact
 

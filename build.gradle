@@ -13,12 +13,23 @@ base {
 
 repositories {
     mavenCentral()
+    maven {
+        name = "Jitpack"
+        url = "https://jitpack.io"
+    }
 }
 
 dependencies {
     // SLF4J for logging
     implementation 'org.slf4j:slf4j-api:2.0.9'
     implementation 'org.slf4j:slf4j-simple:2.0.9'
+    
+    // Baritone API for pathfinding and automation
+    // Note: Baritone integration will be added in Phase 2
+    // when Fabric/Minecraft integration is complete.
+    // For now, modules are structured to use Baritone but
+    // the actual implementation is deferred.
+    // compileOnly 'com.github.cabaletta:baritone:1.10.2'
 }
 
 tasks.withType(JavaCompile).configureEach {
