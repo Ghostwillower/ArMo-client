@@ -17,11 +17,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ThalesFabricMod implements ClientModInitializer {
     
-    public static final String MOD_ID = "thales";
-    public static final String MOD_NAME = "Thales Client";
-    public static final String VERSION = "0.2.0-ALPHA";
-    
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
+    public static final Logger LOGGER = LoggerFactory.getLogger(ThalesClient.MOD_NAME);
     
     private static ThalesFabricMod INSTANCE;
     private ThalesClient client;
@@ -31,15 +27,15 @@ public class ThalesFabricMod implements ClientModInitializer {
         INSTANCE = this;
         
         LOGGER.info("==================================================");
-        LOGGER.info("{} - Phase 2: Minecraft Integration", MOD_NAME);
+        LOGGER.info("{} - Phase 2: Minecraft Integration", ThalesClient.MOD_NAME);
         LOGGER.info("==================================================");
-        LOGGER.info("Initializing {} v{}", MOD_NAME, VERSION);
+        LOGGER.info("Initializing {} v{}", ThalesClient.MOD_NAME, ThalesClient.VERSION);
         LOGGER.info("Under the Radar Assist Client - Loading...");
         
         // Initialize the core client
         client = ThalesClient.getInstance();
         
-        LOGGER.info("{} successfully loaded!", MOD_NAME);
+        LOGGER.info("{} successfully loaded!", ThalesClient.MOD_NAME);
         LOGGER.info("Total modules: {}", client.getModuleManager().getModuleCount());
         LOGGER.info("Modules ready for Minecraft integration");
         LOGGER.info("==================================================");
