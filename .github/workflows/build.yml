@@ -30,10 +30,13 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build --no-daemon
       
+    - name: List generated JAR files
+      run: ls -lh build/libs/
+      
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: thales-client-fabric-${{ github.sha }}
+        name: thales-client-fabric
         path: |
           build/libs/*.jar
           !build/libs/*-sources.jar
@@ -43,7 +46,7 @@ jobs:
     - name: Upload sources
       uses: actions/upload-artifact@v4
       with:
-        name: thales-client-sources-${{ github.sha }}
+        name: thales-client-sources
         path: build/libs/*-sources.jar
         retention-days: 30
         
